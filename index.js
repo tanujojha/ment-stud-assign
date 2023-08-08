@@ -4,12 +4,14 @@ import express from "express";
 import mongoose from "mongoose";
 import studentRoute from "./routes/student.js";
 import mentorRoute from "./routes/mentor.js";
+import cors from "cors";
 
 const app = express();
 const PORT = process.env.PORT || 5000
 
 // middlewares
 app.use(express.json());
+app.use(cors())
 
 
 // connect to DB 
