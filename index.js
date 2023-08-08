@@ -36,6 +36,16 @@ connectDB();
 app.use("/api", mentorRoute);
 app.use("/api", studentRoute);
 
+
+// View Postman published Doc
+app.get("/", async(req, res)=>{
+    res.status(200).send({
+        status: "Success",
+        message: "Click on the URL to view the Postman published documentation",
+        url: "https://documenter.getpostman.com/view/19201756/2s9Xxzut7W",
+    })
+})
+
 app.listen(PORT, ()=>{
     console.log(`Server started on port ${PORT}` );
 })
